@@ -1,0 +1,39 @@
+What happens when you initialize a repository? Why do you need to do it?
+	A .git file is created. No commits are made.
+
+How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+	Staging area is just a prestage to commiting to a repo. It is a intermediate phase
+	It is valuable because it allows you to bundle several file changes into one commit!
+	One logical change in  the program might effect multiple files so, it would make sense to
+	make them into one commit.
+
+How can you use the staging area to make sure you have one commit per logical
+change?
+
+What are some situations when branches would be helpful in keeping your history
+organized? How would branches help?
+
+How do the diagrams help you visualize the branch structure?
+
+What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+
+What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
+manually?
+
+Notes
+git init
+	intializes a repository locally (creates a .git hidden file)
+git add
+	adds a file to the staging area
+git status
+	check repository and file statuses
+Staging Area : an area where you have added but not commited yet.
+	Files waiting to be commited.
+Working Directory : the directory you are in. This stage coems before 
+the staging area.
+git reset 
+	Removes a file you accidentally added to the staging area.
+	 if you accidentally add lesson_2_reflections.txt, but don’t want 
+	 it to be committed yet, run git reset lesson_2_reflections.txt

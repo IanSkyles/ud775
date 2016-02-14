@@ -1,0 +1,227 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+	Git diff id1 id2 allows us to view the differences just like diff
+	output on mac/linux (unix)
+    Diff (unix command) helps by showing the old file and the new file right next to each other and 
+    highlighting (using plus and minus) to show the differences in the files.
+    Unfortunately on windows (in cmd rather than a Unix environment) the command is FC 
+    and it doesn't use the pluses and minuses.
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    You can easily see the changes and revert to a past file if you make a mistake.
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    Pros of manually commiting: No unnecessary storage of past versions that you do not want.
+    Cons of manually commiting: Don't get a history version of every single version. Making commits to big or to small (which causes the commit history to be hard to read and understand)
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    Git files are usually for programming and so they may interact with each other.
+    Thus, a change in one file may require a change in another and it makes no sense
+    to commit a version which is nonfunctional because you only changed one file (thus 
+    breaking the code).
+    Google Docs may treat each file separately because they are usually 
+    documents, excel style sheets, or (power point) presentation style files.
+    Google doc files don't interact with each other.
+
+How can you use the commands git log and git diff to view the history of files?
+
+    git log
+    	find two ids you want to compare
+    git diff firstFourOfIDOne firstFourOfIDTwo
+    now line changes are highlighted in green and red with plus and minus
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    You can revert back to a previous version using git log, git checkout
+    This allows you to find where a bug was introduced and fix it!
+    Able to explore large scale differences in a code base without breaking the project!
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    School assignments and professional use.
+    I would like to experiment around to learn more about git and Github and how
+    to make them work best for me!
+
+Things I learned and notes:
+	FC fileA fileB
+		command to compare two files on windows
+	diff -u fileA fileB 
+		to compare two files on linux and mac (unix)
+	git diff oldWorkingFile newBuggyFile
+		will show what was added/deleted in the new file 
+	git log
+		to view the log of commits
+	q to quit viewing git log
+	git --version
+		to see the version of git you have
+	How often you should make commmits
+		every time there is a change in logic
+	git clome repoUrl
+		clones a repo
+	git config --global color.ui auto
+		To get colored diff output
+	commit is a snapshot of a repository at a certain time!
+	git checkout id
+		good for moving to past commit 
+
+	to find a bug
+		git log
+		git checkout previousVersionId 
+			if no bug then it was introduced in the commit after it
+			if a bug still exists
+				git log
+				git checkout previousVersionId
+		A recursive style solution to finding a bug!
+		you can then git diff the two commits to find the line which introduced the bug!!!
+	cd ~ 
+		takes you to home directory in git bash
+	mv moveFrom fileNewName
+		moves a file to current directory
+
+	Git command review
+
+		Compare two commits, printing each line that is present in one commit but not the other.
+
+		git diff will do this. It takes two arguments - the two commit ids to compare. 
+
+
+		Make a copy of an entire Git repository, including the history, onto your own computer.
+
+		git clone will do this. It takes one argument - the url of the repository to copy. 
+
+
+		Temporarily reset all files in a directory to their state at the time of a specific commit.
+
+		git checkout will do this. It takes one argument - the commit ID to restore. 
+
+
+		Show the commits made in this repository, starting with the most recent.
+
+		git log will do this. It doesn't take any arguments.
+
+	Behavior of git clone
+
+		If someone else gives you the location of their directory or repository, you can copy or clone it to your own computer.
+
+		This is true for both copying a directory and cloning a repository.
+
+		As you saw in the previous lesson, if you have a URL to a repository, you can copy it to your computer using git clone.
+
+		For copying a directory, you weren't expected to know this, but it is possible to copy a directory from one computer to another using the command scp, which stands for "secure copy". The name was chosen because the scp command lets you securely copy a directory from one computer to another. 
+
+
+		The history of changes to the directory or repository is copied.
+
+		This is true for cloning a repository, but not for copying a directory. The main reason to use git clone rather than copying the directory is because git clone will also copy the commit history of the repository. However, copying can be done on any directory, whereas git clone only works on a Git repository. 
+
+
+		If you make changes to the copied directory or cloned repository, the original will not change.
+
+		This is true for both copying a directory and cloning a repository. In both cases, you're making a copy that you can alter without changing the original. 
+
+
+		The state of every file in the directory or repository is copied.
+
+		This is true for both copying a directory and cloning a repository. In both cases, all the files are copied.
+
+Behavior of git log
+
+		git log lists the most recent commit first, as you can verify by checking the commit dates. The middle commit probably contains the code for the mute button, since the commit message indicates that the mute button was added in that commit. The top commit also probably contain the mute button, since that commit is more recent and nothing suggests the mute button has been removed. The bottom commit probably does not contain the mute button, since that commit was created before the commit that added the mute button.
+
+		To summarize:
+
+		commit 7be5a12f1567866b0d77ccdf2055d1a33831da78 (the top commit listed)
+
+		Yes, probably contains the mute button.
+
+Behavior of git diff
+
+		The middle commit, 06d72e, is the first commit with the mute button, so comparing that commit and the previous commit, 3d4d45, would show the changes that add the mute button.
+
+		In order for the changes adding the mute button to be shown as additions, the commit with the mute button needs to be the second argument to git diff. That is because git diff considers the first argument as the "original", and the second argument as the "new" version, so additions are lines present in the second argument but not the first.
+
+		Thus, the last command listed, git diff 3d4d45 06d72e, is correct, and would show the mute button lines as additions. Reversing the arguments and running git diff 06d72e 3d4d45 would instead show the mute button lines as deletions.
+
+		git log output
+
+		For reference, here is the git log output again:
+
+		commit 7be5a12f1567866b0d77ccdf2055d1a33831da78
+		Author: Ellison Leão <el@gmail.com>
+		Date:   Fri Jul 11 12:56:26 2014 -0300
+
+		    Add sound for the wing.
+
+		commit 06d72e1f95f046002ec46f41cf71957227111141
+		Author: Ellison Leão <el@gmail.com>
+		Date:   Wed Jul 9 23:42:55 2014 -0300
+
+		    Add mute button.
+
+		commit 3d4d45b246aad6a1cd0afaf7cfae26966110727e
+		Author: Ellison Leão <el@gmail.com>
+		Date:   Mon Jul 7 17:35:47 2014 -0300
+
+		    Fix leaderboard button
+				commit 06d72e1f95f046002ec46f41cf71957227111141 (the middle commit listed)
+
+				Yes, probably contains the mute button.
+
+				commit 3d4d45b246aad6a1cd0afaf7cfae26966110727e (the bottom commit listed)
+
+				No, probably does not contain the mute button.
+
+				git log output
+
+				For reference, here is the git log output again:
+
+				commit 7be5a12f1567866b0d77ccdf2055d1a33831da78
+				Author: Ellison Leão <el@gmail.com>
+				Date:   Fri Jul 11 12:56:26 2014 -0300
+
+				    Add sound for the wing.
+
+				commit 06d72e1f95f046002ec46f41cf71957227111141
+				Author: Ellison Leão <el@gmail.com>
+				Date:   Wed Jul 9 23:42:55 2014 -0300
+
+				    Add mute button.
+
+				commit 3d4d45b246aad6a1cd0afaf7cfae26966110727e
+				Author: Ellison Leão <el@gmail.com>
+				Date:   Mon Jul 7 17:35:47 2014 -0300
+
+				    Fix leaderboard button
+	Behavior of git checkout
+
+		Checking out an earlier commit will change the state of at least one file.
+
+		This is sometimes true. Git doesn't allow you to save a new commit if no files have been updated, so you might think this is always true. However, it's possible to do the following:
+
+		Save a commit (call this commit 1).
+		Update some files and save another commit (call this commit 2).
+		Change all the files back to their state during commit 1, then save again (call this commit 3).
+		This sometimes happens if commit 2 contained a bug, and it's important to fix the bug quickly. The easiest thing to do might be to remove all the changes introduced by commit 2 to fix the bug, then figure out how to safely reintroduce the changes later.
+
+		At this point, commit 3 is the latest commit, so if you checkout commit 1, none of the files will be changed. 
+
+
+		Checking out an earlier commit will change the state of more than one file.
+
+		Checking out an earlier commit will change the state of every file in the repository.
+
+		Both of these are sometimes true. Since each commit tracks the state of all files in the repository, it is possible that checking out an earlier commit will change the state of multiple files, or even all the files in the repository. However, it is possible to save a new commit after changing only one file, so it is possible only one file will change. 
+
+
+		After checking out a commit, the state of all the files in the repository will be from the same point in time.
+
+		This is always true. A commit saves a snapshot of all files in the repository at the time the commit was made, so checking out an earlier commit will result in all the files being reverted to their state at the time the commit was made. That is, the files will be in a consistent state.
