@@ -10,11 +10,22 @@ What value do you think it offers?
 
 How can you use the staging area to make sure you have one commit per logical
 change?
+	Use git diff --staged to compare it to the most recent commit.
+	Make sure the staging area only adds one logical change.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
+	One situation would be making an easy and a hard mode of a game (eg
+	having asteroids break into 2 pieces instead of 3). Another would be 
+	having multiple languages of a product, in this case you could have a french
+	branch and a master (english) branch! Another situation is a master branch
+	that is fully working and for public use and a expermintal branch that tries new
+	things out.
 
 How do the diagrams help you visualize the branch structure?
+	THey help us understand the branches of our repository. They help understand
+	what will show up in log (the parents) and what things will not be saved (eg
+	a commit to something not in a branch)
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
@@ -37,3 +48,14 @@ git reset
 	Removes a file you accidentally added to the staging area.
 	 if you accidentally add lesson_2_reflections.txt, but don’t want 
 	 it to be committed yet, run git reset lesson_2_reflections.txt
+git diff 
+	git diff with no arguments allows you to see the changes between
+	the staging area and your working directory!
+git diff --staged
+	git diff --staged allows you to see the changes between the repository 
+	(most recent commit) and the staging area
+
+git checkout -b new_branch_name
+	This is the same as running 
+	git branch new_branch_name
+	git checkout new_branch_name
