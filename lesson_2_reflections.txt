@@ -29,9 +29,23 @@ How do the diagrams help you visualize the branch structure?
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
+	Git attempts to automatically merge files.
+	Any lines from before are kept unless they were deleted in one version. If both branches changed a line, 
+	there is a merge conflict. 
+	All other lines are added.
+	Merging a two branches from an unrelated branch results in a 3 way branch which is not
+	desirable.
+	Merging branches creates a new commit and updates the head of 
+	one of the branches to be the new commit.
 
-What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
+
+What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+	Pros of automatic: Simplifies process, quicker, no need to fiddle with code and
+		potentially mess something up during merge.
+	Pros of manual: More control, ensures that you can pick what you want to keep,
+		allows for efficent code and taking the best of both branches.
+
 
 Notes
 git init
@@ -54,8 +68,19 @@ git diff
 git diff --staged
 	git diff --staged allows you to see the changes between the repository 
 	(most recent commit) and the staging area
+git branch -d coins
+	deletes coins branch
+git show commitID
+	show differences between id and its parent
 
 git checkout -b new_branch_name
 	This is the same as running 
 	git branch new_branch_name
 	git checkout new_branch_name
+
+merging conflict notes
+	git checkout easy-mode
+	git merge master easy-mode 
+	top sections is your code (easy-mode)
+	middle is original (common parent)
+	bottom is their code. (master)
