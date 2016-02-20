@@ -1,0 +1,29 @@
+Review for Udacity's Introduction to Git and Gituhb
+
+This class takes you from 0 to confident in Git. The first lessons consists
+of learning git commands. The second, Git repositroies. And, the third 
+Git, Github, Forking and Merging. The skill level increases overtime but,
+that's okay because they give you everthing you need to succeed. 
+At the start of the course I had some idea what git and github were (I thought
+of them as the same thing). I knew that the combination was a useful tool for
+storing my previous code online. I knew that Github was useful for finding
+solutions to problems that you were working on and a good way to see
+what classmates were coding. 
+By the end, I knew how to use git and github to collaborate. I learned
+what and how version control works. This class definitely did a better job
+at teaching Git/Github than my professor (Josh Tenenberg). I now feel
+confident to work on projects collaboratively and use version control to 
+maximize my personal benefit. 
+I had a senior in my program the other day ask what version control was 
+(while using Git and Github). I cringed inside but, I knew it wasn't his fault,
+I let him know about the course to help him make up for our terrible professor.
+
+This course should be required after every intro to cs course.
+Some things were not annoying however. 
+I had trouble doing the last project which involved forking and 
+cloneing a project from Udacity. The project would not checkout on
+to my computer because file names was too long in the directories.
+I posted to the forums and got an answer the next day on how to fix
+this problem. This could have been some sort of targeted marketing (it is 
+only my second course and first question post to the forum). Either way,
+I am greatful for the speedy response. 
