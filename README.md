@@ -24,13 +24,13 @@ I published this repository containing my reflections from the course. Also, I f
 ##Course Syllabus
 ###Lesson 1: Navigating a Commit History
 
-In this lesson, you’ll learn about a few different types of version control systems and discover what makes Git a great version control system for programmers. You’ll also get practice using Git to view the history of an existing project. You’ll learn to see all the versions that have been saved, checkout a previous version, and compare two different versions.
+In this lesson, I learned about a few different types of version control systems and discovered what makes Git a great version control system for programmers. I also got practice using Git to view the history of an existing project. I learned to see all the versions that have been saved, checkout a previous version, and compare two different versions.
 
 ###Lesson 2: Creating and Modifying a Repository
 
-In this lesson, you’ll learn how to create a repository and save versions of your project. You’ll learn about the staging area, committing your code, branching, and merging, and how you can use these to make you more efficient and effective.
+In this lesson, I learned how to create a repository and save versions of my project. I learned about the staging area, committing my code, branching, and merging, and how I can use these be more efficient and effective.
 
 ###Lesson 3: Using GitHub to Collaborate
 
-In this lesson, you’ll get practice using GitHub or other remote repositories to share your changes with others and collaborate on multi-developer projects. You’ll learn how to make and review a pull request on GitHub. Finally, you’ll get practice by collaborating with other Udacity students to write a create-your-own-adventure story.
+In this lesson, I got practice using GitHub (remote repositories) to share my changes with others and collaborate on multi-developer projects. I learned how to make and review a pull request on GitHub. Finally, I got practice with all of the skills I learned in the course by collaborating with other Udacity students to write a create-your-own-adventure story.
 
