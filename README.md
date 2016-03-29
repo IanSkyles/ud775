@@ -34,3 +34,10 @@ In this lesson, I learned how to create a repository and save versions of my pro
 
 In this lesson, I got practice using GitHub (remote repositories) to share my changes with others and collaborate on multi-developer projects. I learned how to make and review a pull request on GitHub. Finally, I got practice with all of the skills I learned in the course by collaborating with other Udacity students to write a create-your-own-adventure story.
 
+##Cheat Sheet
+###Push deleted files to github from local repo.
+```
+git add . -A
+git commit -m "Deleted some files..."
+git push origin master
+```
