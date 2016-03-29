@@ -78,4 +78,25 @@ git checkout new_branch_name
 	git checkout yourBranch
 	git merge master yourBranch 
 ```
-
+###Recursively find a bug
+```
+git log
+	git checkout previousVersionId 
+```
+		if no bug then it was introduced in the commit after it (previously checkedout)
+		if a bug still exists
+```
+			git log
+			git checkout previousVersionId
+```
+###Compare two commits, printing each line that is present in one commit but not the other.
+`git diff id1 id2` will do this. It takes two arguments - the two commit ids to compare. 
+###Make a copy of an entire Git repository, including the history, onto your own computer.
+`git clone htttpsOfRepo` will do this. It takes one argument - the url of the repository to copy. 
+###Temporarily reset all files in a directory to their state at the time of a specific commit.
+`git checkout commitId` will do this. It takes one argument - the commit ID to restore. 
+###Show the commits made in this repository, starting with the most recent. q to quit viewing git log.
+`git log` will do this. It doesn't take any arguments.
+###To see the version of git you have
+`git --version`
+	
