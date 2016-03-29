@@ -34,10 +34,48 @@ In this lesson, I learned how to create a repository and save versions of my pro
 
 In this lesson, I got practice using GitHub (remote repositories) to share my changes with others and collaborate on multi-developer projects. I learned how to make and review a pull request on GitHub. Finally, I got practice with all of the skills I learned in the course by collaborating with other Udacity students to write a create-your-own-adventure story.
 
+##Definitions
+###Staging Area : an area where you have added but not commited yet. Files waiting to be commited.
+###Working Directory : the directory you are in. This stage comes before the staging area.
+
 ##Cheat Sheet
+
 ###Push deleted files to github from local repo.
 ```
 git add . -A
 git commit -m "Deleted some files..."
 git push origin master
 ```
+###Initialize a repository locally (creates a .git hidden file)
+`git init`
+###Add a file to the staging area
+`git add fileNameHere`
+###Check repository and file statuses
+`git status`
+###Remove a file from the staging area, that you accidentally added to the staging area.
+`git reset fileNameHere`
+###see the changes between the staging area and your working directory!
+`git diff `
+###	git diff --staged allows you to see the changes between the repository (most recent commit) and the staging area
+`git diff --staged`
+###Delete a branch
+`git branch -d branchNameHere`
+###Show differences between commit id and its parent
+`git show commitIDHERE`
+###Create a new branch and check it out
+`git checkout -b new_branch_name`
+This is the same as running
+```
+git branch new_branch_name
+git checkout new_branch_name
+```
+
+#Merge Conflicts Locally
+* top sections is your code (yourBranch)
+* middle is original (common parent)
+* bottom is their code. (master)
+```
+	git checkout yourBranch
+	git merge master yourBranch 
+```
+
