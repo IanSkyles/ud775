@@ -70,7 +70,7 @@ git branch new_branch_name
 git checkout new_branch_name
 ```
 
-#Merge Conflicts Locally
+###Merge Conflicts Locally
 * top sections is your code (yourBranch)
 * middle is original (common parent)
 * bottom is their code. (master)
