@@ -106,3 +106,13 @@ git log
 `git reset HEAD filename` 	
 ###Can be used to reset to a previous commit in your commit history.
 `git reset SHA` 
+###Lists all a Git project's branches.
+`git branch`
+###Creates a new branch.
+`git branch branch_name`
+###Used to switch from one branch to another.
+`git checkout branch_name`
+###Used to join file changes from one branch to another.
+`git merge branch_name`
+###Deletes the branch specified.
+`git merge -d branch_name`
