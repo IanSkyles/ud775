@@ -100,3 +100,9 @@ git log
 ###To see the version of git you have
 `git --version`
 	
+###Discards changes in the working directory
+`git checkout HEAD filename` 	
+###Unstages file changes in the staging area.
+`git reset HEAD filename` 	
+###Can be used to reset to a previous commit in your commit history.
+`git reset SHA` 
